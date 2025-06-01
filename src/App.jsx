@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
 // Home Page based on Google Docs content
-const Home = () => (
+/*const Home = () => (
   <div className="p-8 max-w-6xl mx-auto">
     <h1 className="text-4xl font-bold text-purple-700 mb-6">AnmolxLabs</h1>
     <p className="mb-6 text-lg">
@@ -40,7 +41,7 @@ const Home = () => (
     </div>
   </div>
 );
-
+*/
 // Other pages
 const Workshop = () => <div className="p-8 text-center text-xl">Workshop page under construction.</div>;
 const Resources = () => <div className="p-8 text-center text-xl">Resources page coming soon.</div>;
