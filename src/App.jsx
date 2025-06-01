@@ -2,33 +2,10 @@
 // Pages: Home, Workshop, Resources, About, Contact
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
 // Fallback components until actual pages are implemented
-const Home = () => (
-  <div className="text-center p-8">
-    <h1 className="text-4xl font-bold text-purple-700 mb-4">Welcome to Anmolxlabs</h1>
-    <p className="text-lg mb-6 max-w-xl mx-auto">
-      Learn how to go from a student to a standout leader, founder, or researcher. Explore our premium toolkits, hands-on workshops, and more.
-    </p>
-    <a href="/workshop" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-700 transition">
-      Join the June 7 Workshop →
-    </a>
-    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="bg-white shadow-md p-6 rounded-xl border">
-        <h2 className="text-xl font-semibold mb-2">🚀 Pitch Deck Kit</h2>
-        <p>Craft winning startup decks with our ready-to-use templates and guidance.</p>
-      </div>
-      <div className="bg-white shadow-md p-6 rounded-xl border">
-        <h2 className="text-xl font-semibold mb-2">📄 Research Paper Toolkit</h2>
-        <p>Learn how to write, structure, and publish impactful research papers.</p>
-      </div>
-      <div className="bg-white shadow-md p-6 rounded-xl border">
-        <h2 className="text-xl font-semibold mb-2">🎯 Event Strategy Guide</h2>
-        <p>Organize college events like a pro with our planner and strategy kit.</p>
-      </div>
-    </div>
-  </div>
-);
+
 
 const Workshop = () => <div className="p-8 text-center text-xl">Workshop page under construction.</div>;
 const Resources = () => <div className="p-8 text-center text-xl">Resources page coming soon.</div>;
