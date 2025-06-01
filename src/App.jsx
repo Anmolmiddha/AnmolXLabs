@@ -1,46 +1,69 @@
-// Root structure of Anmolxlabs multi-page website using React + Tailwind
-// Pages: Home, Workshop, Resources, About, Contact
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
 
-// Fallback components until actual pages are implemented
+// Home Page based on Google Docs content
+const Home = () => (
+  <div className="p-8 max-w-6xl mx-auto">
+    <h1 className="text-4xl font-bold text-purple-700 mb-6">AnmolxLabs</h1>
+    <p className="mb-6 text-lg">
+      Your go-to toolkit for building pitch decks, getting research published, designing high-impact workshops, and organizing unforgettable tech events – all in one place.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">🎤 Master Webinars</h2>
+        <p>Learn how to build and sell knowledge-based workshops that convert like crazy.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">📊 Pitch Deck Toolkits</h2>
+        <p>Access investor-ready templates + guides that help you pitch, fund, and scale.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">📚 Research Paper Roadmaps</h2>
+        <p>From zero to published – a step-by-step framework to build and publish papers that matter.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">🎯 Event Strategy Kits</h2>
+        <p>Proven blueprints to plan, promote, and execute events that drive attention + impact.</p>
+      </div>
+    </div>
+    <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-xl shadow-md mb-10">
+      <h3 className="text-2xl font-semibold text-purple-700 mb-2">⚡ Why AnmolxLabs?</h3>
+      <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Actionable Templates:</strong> No fluff. Just plug-and-play files, plans, and flows.</li>
+        <li><strong>Built by a Practitioner:</strong> Created by Anmol Middha, a researcher, speaker, and student mentor.</li>
+        <li><strong>For Doers:</strong> Whether you’re in college or building your first startup – we got you.</li>
+      </ul>
+    </div>
+    <div className="text-center">
+      <a href="/resources" className="bg-purple-700 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-800 transition">
+        🚀 Explore Toolkits
+      </a>
+    </div>
+  </div>
+);
 
-
+// Other pages
 const Workshop = () => <div className="p-8 text-center text-xl">Workshop page under construction.</div>;
 const Resources = () => <div className="p-8 text-center text-xl">Resources page coming soon.</div>;
-
 const About = () => (
   <div className="p-8 max-w-4xl mx-auto">
     <h1 className="text-3xl font-bold text-purple-700 mb-6">About AnmolxLabs</h1>
-    <p className="mb-4">
-      Welcome to AnmolxLabs – a knowledge-driven platform built to empower students, innovators, and aspiring leaders with world-class resources and actionable insights.
-    </p>
-    <p className="mb-4">
-      Founded by Anmol Middha, a researcher, speaker, and mentor, AnmolxLabs is a hub for those who dream big and act bold. From crafting impactful pitch decks and publishing standout research papers, to mastering the art of event strategy and delivering high-converting workshops – we provide the exact blueprints you need to accelerate your journey.
-    </p>
+    <p className="mb-4">Welcome to AnmolxLabs – a knowledge-driven platform built to empower students, innovators, and aspiring leaders with world-class resources and actionable insights.</p>
+    <p className="mb-4">Founded by Anmol Middha, a researcher, speaker, and mentor, AnmolxLabs is a hub for those who dream big and act bold...</p>
     <p className="mb-4 font-semibold">Our mission is simple: <span className="italic font-normal">To transform raw ambition into refined execution.</span></p>
-    <p className="mb-4">
-      Whether you're a college student preparing for your next tech event, a young innovator needing research guidance, or a creator looking to build a powerful narrative – AnmolxLabs gives you the tools, templates, and mentorship to stand out and scale up.
-    </p>
     <h2 className="text-2xl font-semibold text-purple-600 mb-2">What We Offer:</h2>
     <ul className="list-disc list-inside mb-4 space-y-2">
-      <li><strong>Master Webinars & Workshops</strong> – Learn directly from real-world strategies that work.</li>
-      <li><strong>Pitch Deck Toolkits</strong> – Investor-ready templates and guides for founders and startups.</li>
-      <li><strong>Research Paper Roadmaps</strong> – Step-by-step guidance to get published and cited.</li>
-      <li><strong>Event Strategy Kits</strong> – Curated assets to help you plan, execute, and promote events that leave an impact.</li>
+      <li><strong>Master Webinars & Workshops</strong></li>
+      <li><strong>Pitch Deck Toolkits</strong></li>
+      <li><strong>Research Paper Roadmaps</strong></li>
+      <li><strong>Event Strategy Kits</strong></li>
     </ul>
     <p>Built on experience, led by insight, and powered by purpose – AnmolxLabs is your launchpad to leadership.</p>
   </div>
 );
-
 const Contact = () => (
   <div className="p-8 max-w-6xl mx-auto">
     <h1 className="text-3xl font-bold text-purple-700 mb-6">Get in Touch</h1>
-    <p className="mb-4 max-w-2xl">
-      Have a question, partnership idea, or need personalized guidance? We’d love to hear from you.
-      Whether you're a student, educator, startup founder, or curious learner – we’re here to help you take your next big leap with the right tools and support.
-    </p>
+    <p className="mb-4 max-w-2xl">Have a question, partnership idea, or need personalized guidance? We’d love to hear from you.</p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <form className="bg-white shadow-md rounded-xl p-6 space-y-4">
         <input type="text" placeholder="Your Name" className="w-full border p-3 rounded-lg" required />
@@ -59,12 +82,7 @@ const Contact = () => (
         <div className="bg-white border shadow p-4 rounded-xl">
           <h3 className="font-semibold text-lg mb-2">🎯 Book a Consultation</h3>
           <p className="mb-3">Want 1:1 help or project collaboration?</p>
-          <a 
-            href="mailto:anmolxlabs@gmail.com?subject=Booking%20Request%20from%20AnmolxLabs%20Website" 
-            className="block text-center bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700"
-          >
-            Book via Email
-          </a>
+          <a href="mailto:anmolxlabs@gmail.com?subject=Booking%20Request%20from%20AnmolxLabs%20Website" className="block text-center bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Book via Email</a>
         </div>
         <div>
           <h4 className="font-semibold mb-2">🔗 Socials</h4>
@@ -77,6 +95,7 @@ const Contact = () => (
   </div>
 );
 
+// Navigation and Layout
 const Navbar = () => (
   <nav className="bg-purple-700 text-white px-6 py-4 flex justify-between items-center">
     <h1 className="text-2xl font-bold">Anmolxlabs</h1>
@@ -96,6 +115,7 @@ const Footer = () => (
   </footer>
 );
 
+// Main App
 export default function App() {
   return (
     <Router>
