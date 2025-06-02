@@ -10,9 +10,15 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   base: './', // 👈 Add this line to fix blank page issue on Netlify
   plugins: [react()],
+   build: {
+    rollupOptions: {
+      external: ['aos'], // <-- this line
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
   },
 });
+
