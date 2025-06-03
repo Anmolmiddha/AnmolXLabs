@@ -51,7 +51,8 @@ const Home = () => (
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Contact from './pages/Contact'; 
+import Contact from './pages/Contact';
+
 
 // Workshop component
 const Workshop = () => (
@@ -129,4 +130,3 @@ export default function App() {
 }
 
 // NOTE: You need to import Contact below after creating the Contact component file with Firebase logic!
-
