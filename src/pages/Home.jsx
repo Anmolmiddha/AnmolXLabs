@@ -12,6 +12,49 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const Home = () => (
+  <div className="p-8 max-w-6xl mx-auto">
+    <h1 className="text-4xl font-bold text-purple-700 mb-6">AnmolxLabs</h1>
+    <p className="mb-6 text-lg">
+      Your go-to toolkit for building pitch decks, getting research published, designing high-impact workshops, and organizing unforgettable tech events – all in one place.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">🎤 Master Webinars</h2>
+        <p>Learn how to build and sell knowledge-based workshops that convert like crazy.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">📊 Pitch Deck Toolkits</h2>
+        <p>Access investor-ready templates + guides that help you pitch, fund, and scale.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">📚 Research Paper Roadmaps</h2>
+        <p>From zero to published – a step-by-step framework to build and publish papers that matter.</p>
+      </div>
+      <div className="bg-white shadow-md rounded-xl p-6 border">
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">🎯 Event Strategy Kits</h2>
+        <p>Proven blueprints to plan, promote, and execute events that drive attention + impact.</p>
+      </div>
+    </div>
+    <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-xl shadow-md mb-10">
+      <h3 className="text-2xl font-semibold text-purple-700 mb-2">⚡ Why AnmolxLabs?</h3>
+      <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Actionable Templates:</strong> No fluff. Just plug-and-play files, plans, and flows.</li>
+        <li><strong>Built by a Practitioner:</strong> Created by Anmol Middha, a researcher, speaker, and student mentor.</li>
+        <li><strong>For Doers:</strong> Whether you’re in college or building your first startup – we got you.</li>
+      </ul>
+    </div>
+    <div className="text-center">
+      <a href="/resources" className="bg-purple-700 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-800 transition">
+        🚀 Explore Toolkits
+      </a>
+    </div>
+  </div>
+);
+
+
+
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
