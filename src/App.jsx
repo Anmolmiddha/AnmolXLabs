@@ -129,4 +129,4 @@ export default function App() {
 }
 
 // NOTE: You need to import Contact below after creating the Contact component file with Firebase logic!
-import Contact from './pages/Contact';  // Adjust the path if necessary
+
